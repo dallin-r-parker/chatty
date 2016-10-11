@@ -4,12 +4,14 @@ angular.module('chattyApp')
   .controller('MainCtrl', function ( $scope, messageService ) {
     messageService.getMessages().then(function ( response ) {
       $scope.messages = response.data;
+      console.log($scope.messages);
     });
 
     $scope.addMessage = function ( message ) {
       if (message) {
         messageService.addMessage(message).then(function ( response ) {
           $scope.messages = response.data;
+          console.log($scope.messages);
         });
       }
     };
@@ -19,4 +21,6 @@ angular.module('chattyApp')
       'AngularJS',
       'Karma'
     ];
+
+
   });
