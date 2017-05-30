@@ -3,7 +3,8 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 
-var messages = [];
+var messages = ['dallin', 'parker'];
+
 
 app.use(bodyParser.json());
 
@@ -34,6 +35,7 @@ app.post('/', function( req, res ) {
     message: req.body.message,
     time: new Date()
   });
+  console.log(messages)
 
   res.status(200).set({
    'Content-Type': 'application/json',
