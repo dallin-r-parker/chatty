@@ -1,12 +1,7 @@
 //==================== REQUIRED
-
-//request = request from the frontend
-//response = what the server gives back
-
-
 var express = require('express');
 var app = express();
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 
 var messages = [];
 
